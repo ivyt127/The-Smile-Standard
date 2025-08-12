@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Portal Meridian Corporate Center</title>
+    <link rel="stylesheet" href="corporate.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+    <header>
+        <div class="heading">
+        <div class="logo">
+        <div class="name">MERIDIAN CORPORATE CENTER</div>
+    </div>
+        <nav class="nav">
+        <a href="#dashboard" class="link">Dashboard</a>
+        <a href="#announcements" class="link">News</a>
+        <a href="HumanRatings.html" class="link ratings">Access to Employee Ratings</a>
+        <a href="main.html" class="link portalaccess">Employee Portal</a>
+        </nav>
+    </div>
+    </header>
+        <section class="section1">
+            <div class="content">
+            <h1 class="title">Welcome, Sarah</h1>
+            <p class="subtitle">Today’s first client interaction is projected for 09:07. Please adjust your mood accordingly. Below is your dashboard with a list of scheduled work for you to complete. Before beginning, please open the subject file audit to review your Emotional Financial Score. Your current Emotional Financial Score sits just above the workplace average, carrying over the positive gains from yesterday. 
+</p>
+
+            <div class="time">
+            <div class="current" id="currentTime">01:23 PM</div>
+            <div class="date" id="currentDate">Thursday, August 7, 2025</div>
+            </div>
+                
+            <div class="status">
+            Make sure today you also remember to recognise it. This is not just a suggestion,  recognition is logged and recorded as part of your performance alignment. Each moment you acknowledge will feed directly into the system’s evaluation at the end of your shift. 
+            </div>
+                
+            <div class="stats">
+                <div class="item">
+                <div class="number">847</div>
+
+                <div class="label">Employees Online</div>
+                </div>
+                <div class="item">
+                <div class="number">12</div>
+                <div class="label">Active Meetings</div>
+                </div>
+                    
+                <div class="item">
+                <div class="number">94%</div>
+                <div class="label">System Health</div>
+                </div>
+                </div>
+                
+            <div class="buttons">
+                <a href="#dashboard" class="leftbutton">Access Dashboard</a>
+                <button id="auditbutton" class="rightbutton auditbutton">Subject File Audit</button>
+                </div>
+            </div>
+        </section>
+
+        <div id="auditModal" class="modal">
+        <div class="modalcontent">
+        <div class="modalheader">
+            <h2>SUBJECT FILE: YR-280129</h2>
+            <span class="close">&times;</span>
+        </div>
+           
+        <div class="modalbody">
+                <div class="audit-info">
+                <div class="modalsubject">
+                <span>Subject:</span>
+                <span>Park, Sarah - ID: YR-459921</span>
+                    </div>
+                    
+        <div class="emotionssection">
+                <h4>📊 Emotional Profile</h4>
+        <div class="grid">
+        <div class="item">
+            <span>Compliance</span>
+        <div class="bar">
+        <div class="fill" style="width: 85%; background: #4CAF50;"></div>
+        </div>
+                               
+        <span class="emotionvalue">85%</span>
+        </div>
+        <div class="item">
+            <span>Happiness</span>
+        <div class="bar">
+        <div class="fill" style="width: 42%; background: #FF9800;"></div>
+        </div>
+                                
+        <span class="emotionvalue">42%</span>
+        </div>
+        <div class="item">
+             <span>Productivity</span>
+        <div class="bar">
+        <div class="fill" style="width: 73%; background: #2196F3;"></div>
+         </div>
+            <span class="emotionvalue">73%</span>
+         </div>
+        <div class="item">
+            <span>Anxiety</span>
+        <div class="bar">
+        <div class="fill" style="width: 67%; background: #F44336;"></div>
+        </div>
+            <span class="emotionvalue">67%</span>
+        </div>
+        </div>
+             <button class="button2">RECOGNIZE</button>
+         </div>
+                    
+        <div class="historysection">
+            <h4>📋 Placement Reaction Footage</h4>
+            <div class="logs">
+            <div class="entry">
+                <span>[2025-07-28 09:15:23]</span>
+                <span>Initial placement assessment completed</span>
+                </div>
+        <div class="entry">
+                <span>[2025-07-27 14:42:18]</span>
+                <span>Emotional baseline established - standard parameters</span>
+        </div>
+
+        <div class="entry">
+                <span>[2025-07-26 11:33:07]</span>
+                <span>Parental appeal filed - case YR-459921-PA</span>
+        </div>
+
+        <div class="entry">
+                <span>[2025-07-25 16:28:45]</span>
+                <span>Aptitude test results: Above average performance</span>
+        </div>
+
+        <div class="entry">
+                <span>[2025-07-24 10:11:32]</span>
+                <span>Subject assigned to monitoring program</span>
+        </div>
+        </div>
+        </div>
+        </div>
+    </div>
+    </div>
+    </div>
+
+    <section id="dashboard" class="aboutsection">
+            <div class="section">
+            <h2 class="abouttitle">Employee Dashboard</h2>
+            <p class="aboutsubtitle">Welcome to your personalized workplace dashboard. Here you can monitor your productivity metrics, check team updates, and access all the tools you need for a successful workday.</p>
+                
+        <div class="grid">
+        <div class="text">
+        <div class="textcontent">
+            <p>Your employee portal is currently active and monitoring your performance metrics. All data is processed in compliance with company privacy policies and is used solely for productivity optimization.</p>
+                            
+        <h3>Today's Schedule</h3>
+        <ul>
+        <li><input type="checkbox" id="task1"> <label for="task1">9:00 AM Team Standup Meeting</label></li>
+             <li><input type="checkbox" id="task2"> <label for="task2">10:30 AM Project Review</label></li>
+            <li><input type="checkbox" id="task3"> <label for="task3">2:00 PM System Calibration</label></li>
+            <li><input type="checkbox" id="task4"> <label for="task4">4:00 PM Performance Assessment</label></li>
+        </ul>
+         </div>
+         </div>
+                    
+         <div class="metrics">
+            <div class="card">
+            <h3>Department Access</h3>
+            <ul>
+            <li>IT & Technology Services</li>
+            <li>Human Resources Portal</li>
+            <li>Financial Operations</li>
+            <li>Security & Compliance</li>
+            </ul>
+        </div>
+        </div>
+        </div>
+        </div>
+    </section>
+
+    <section id="announcements" class="contact">
+        <div class="section">
+        <h2 class="section-title">Company Announcements</h2>
+            <div class="grid">
+            <div class="info">
+                <h3>Latest Updates</h3>
+                <div class="item">
+                <strong>Employee Portal Update:</strong>
+                <p>System upgrade scheduled for August 15th. All employees will receive new portal access credentials with enhanced productivity monitoring.</p>
+            </div>
+                        
+            <div class="item">
+            <strong>Office Hours:</strong>
+                <p>Building access: 6:00 AM to 10:00 PM</p>
+            </div>
+                        
+            <div class="item">
+            <strong>IT Helpdesk:</strong>
+                <p>ext. 4455 or it-support@smilestandard.com</p>
+            </div>
+                        
+            <div class="item">
+            <strong>Emergency Contact:</strong>
+                <p>Security: ext. 911 | Medical: ext. 911</p>
+            </div>
+            </div>
+                   
+            <div class="form">
+            <h3>Submit a Request</h3>
+                <form id="contactForm">
+                <div class="group">
+                <input type="text" id="contactName" placeholder="Employee ID" required>
+            </div>
+                            
+            <div class="group">
+                <input type="email" id="contactEmail" placeholder="Work Email Address" required>
+            </div>
+                            
+            <div class="group">
+                <input type="text" id="contactCompany" placeholder="Department">
+            </div>
+                            
+            <div class="group">
+                <select id="contactService">
+            <option value="">Select Request Type</option>
+            <option value="it-support">IT Support</option>
+            <option value="hr-request">HR Request</option>
+            <option value="facilities">Facilities</option>
+            <option value="portal-tech">Portal Tech Support</option>
+            </select>
+            </div>
+                            
+            <div class="group">
+            <textarea id="contactMessage" placeholder="Describe your request..." rows="4"></textarea>
+            </div>
+            <button type="submit" class="submit">Submit Request</button>
+            </form>
+            </div>
+            </div>
+        </div>
+        </section>
+
+        <footer class="footer">
+            <div class="footercontent">
+            <div class="footersection">
+            <h4>Company</h4>
+            <ul>
+            <li><a href="#dashboard">Dashboard</a></li>
+            <li><a href="#departments">Departments</a></li>
+            <li><a href="#announcements">News</a></li>
+            </ul>
+        </div>
+                
+        <div class="footersection">
+            <h4>Legal</h4>
+            <ul>
+            <li><a href="#">Employee Handbook</a></li>
+            <li><a href="#">HR Policies</a></li>
+            <li><a href="#">Data Protection</a></li>
+            <li><a href="#">Compliance</a></li>
+            </ul>
+        </div>
+                
+        <div class="footersection">
+            <h4>Connect</h4>
+            <ul>
+            <li><a href="main.html">Employee Portal</a></li>
+            <li><a href="main.html">Main Interface</a></li>
+            <li><a href="#dashboard">Employee Dashboard</a></li>
+            <li><a href="#announcements">System Status</a></li>
+            </ul>
+        </div>
+        </div>
+            
+        <div class="footerbottom">
+            <p>&copy; 2025 Meridian Corporate Center. All rights reserved.</p>
+            <p>MERIDIAN_OS v2.4.7 | System Status: <span class="online">ONLINE</span></p>
+            </div>
+        </footer>
+    </div>
+
+    <script src="corporate.js"></script>
+</body>
+</html>

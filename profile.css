@@ -1,0 +1,1030 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background: 
+        radial-gradient(ellipse at 30% 20%, rgba(0, 255, 255, 0.15) 0%, transparent 50%),
+        radial-gradient(ellipse at 70% 80%, rgba(0, 150, 255, 0.12) 0%, transparent 60%),
+        radial-gradient(ellipse at center 55%, #5ba3d4 0%, #1e4a66 25%, #0d2c42 55%, #09233b 85%, #061929 100%);
+    color: #e8eaed;
+    min-height: 100vh;
+    line-height: 1.6;
+    position: relative;
+    overflow-x: hidden;
+}
+
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: 
+        radial-gradient(circle at 20% 80%, rgba(0, 255, 255, 0.1) 0%, transparent 50%),
+        radial-gradient(circle at 80% 20%, rgba(0, 150, 255, 0.08) 0%, transparent 50%),
+        radial-gradient(circle at 40% 40%, rgba(91, 163, 212, 0.05) 0%, transparent 50%);
+    pointer-events: none;
+    z-index: -1;
+}
+
+.profileheader {
+    background: linear-gradient(90deg, rgba(15, 23, 42, 0.95) 0%, rgba(30, 41, 59, 0.95) 100%);
+    backdrop-filter: blur(20px);
+    border-bottom: 1px solid rgba(148, 163, 184, 0.1);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1.2rem 2rem;
+    max-width: 1400px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.navleft, .navright {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.navleft {
+    left: 2rem;
+}
+
+.navcenter {
+    flex: 1;
+    text-align: center;
+}
+
+.navcenter h1 {
+    font-size: 1.4rem;
+    font-weight: 600;
+    background: linear-gradient(135deg, #00ffff 0%, #0096ff 50%, #5ba3d4 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    letter-spacing: -0.025em;
+}
+
+.backlink {
+    color: #94a3b8;
+    text-decoration: none;
+    padding: 0.6rem 1.2rem;
+    border: 1px solid rgba(148, 163, 184, 0.2);
+    border-radius: 8px;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    font-size: 0.9rem;
+    font-weight: 500;
+    background: rgba(15, 23, 42, 0.5);
+    backdrop-filter: blur(10px);
+    position: relative;
+    overflow: hidden;
+}
+
+.backlink::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(96, 165, 250, 0.1), transparent);
+    transition: left 0.5s;
+}
+
+.backlink:hover::before {
+    left: 100%;
+}
+
+.backlink:hover {
+    background: rgba(0, 255, 255, 0.1);
+    border-color: rgba(0, 255, 255, 0.3);
+    color: #00ffff;
+    transform: translateY(-1px);
+    box-shadow: 0 8px 25px rgba(0, 255, 255, 0.15);
+}
+.profilecontainer {
+    max-width: 1400px;
+    margin: 2rem auto;
+    padding: 0 2rem;
+    display: grid;
+    grid-template-columns: 350px 1fr;
+    gap: 2.5rem;
+}
+
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    position: sticky;
+    top: 120px;
+    height: fit-content;
+}
+
+.profilecard {
+    background: linear-gradient(145deg, rgba(15, 23, 42, 0.8) 0%, rgba(30, 41, 59, 0.6) 100%);
+    backdrop-filter: blur(20px);
+    border-radius: 16px;
+    padding: 2rem;
+    text-align: center;
+    border: 1px solid rgba(148, 163, 184, 0.1);
+    box-shadow: 
+        0 10px 25px rgba(0, 0, 0, 0.2),
+        0 0 0 1px rgba(255, 255, 255, 0.05) inset;
+    position: relative;
+    overflow: hidden;
+}
+
+.profilecard::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(96, 165, 250, 0.5), transparent);
+}
+
+.info h2 {
+    font-size: 1.6rem;
+    margin-bottom: 0.5rem;
+    color: #f8fafc;
+    font-weight: 600;
+    letter-spacing: -0.025em;
+}
+
+.title {
+    font-size: 1rem;
+    background: linear-gradient(135deg, #00ffff 0%, #0096ff 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 0.3rem;
+    font-weight: 500;
+}
+
+.department {
+    color: #94a3b8;
+    font-size: 0.85rem;
+    margin-bottom: 1.5rem;
+    font-weight: 400;
+}
+
+.status {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.6rem;
+    font-size: 0.85rem;
+    font-weight: 500;
+}
+
+.statusind {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    position: relative;
+}
+
+.statusind::after {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    border-radius: 50%;
+    background: inherit;
+    opacity: 0.3;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0%, 100% { transform: scale(0.8); opacity: 0.3; }
+    50% { transform: scale(1.2); opacity: 0.1; }
+}
+
+.emotionalprofile, .stats {
+    background: linear-gradient(145deg, rgba(15, 23, 42, 0.6) 0%, rgba(30, 41, 59, 0.4) 100%);
+    backdrop-filter: blur(20px);
+    border-radius: 12px;
+    padding: 1.5rem;
+    border: 1px solid rgba(148, 163, 184, 0.1);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.emotionalprofile h3, .stats h3 {
+    background: linear-gradient(135deg, #00ffff 0%, #0096ff 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-size: 0.95rem;
+    margin-bottom: 1.2rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.emotionalitem, .metric {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.75rem 0;
+    border-bottom: 1px solid rgba(148, 163, 184, 0.1);
+    transition: all 0.2s ease;
+}
+
+.emotionalitem:hover, .metric:hover {
+    background: rgba(0, 255, 255, 0.05);
+    margin: 0 -1.5rem;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    border-radius: 6px;
+}
+
+.emotionalitem:last-child, .metric:last-child {
+    border-bottom: none;
+}
+
+.emotionlabel, .label {
+    color: #94a3b8;
+    font-size: 0.85rem;
+    font-weight: 500;
+}
+
+.emotionvalue, .value {
+    color: #f8fafc;
+    font-size: 0.85rem;
+    font-weight: 600;
+    font-family: 'JetBrains Mono', monospace;
+}
+
+.profilecontent {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.profilesection {
+    background: linear-gradient(145deg, rgba(15, 23, 42, 0.8) 0%, rgba(30, 41, 59, 0.6) 100%);
+    backdrop-filter: blur(20px);
+    border-radius: 16px;
+    padding: 2rem;
+    border: 1px solid rgba(148, 163, 184, 0.1);
+    box-shadow: 
+        0 10px 25px rgba(0, 0, 0, 0.1),
+        0 0 0 1px rgba(255, 255, 255, 0.05) inset;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.profilesection:hover {
+    transform: translateY(-2px);
+    box-shadow: 
+        0 20px 40px rgba(0, 0, 0, 0.15),
+        0 0 0 1px rgba(255, 255, 255, 0.08) inset;
+}
+
+.profilesection::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(0, 255, 255, 0.3), transparent);
+}
+
+.profilesection h3 {
+    background: linear-gradient(135deg, #00ffff 0%, #0096ff 50%, #5ba3d4 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-size: 1.3rem;
+    margin-bottom: 1.5rem;
+    font-weight: 600;
+    letter-spacing: -0.025em;
+}
+
+.profilesection p {
+    color: #cbd5e1;
+    line-height: 1.7;
+    font-size: 0.95rem;
+    font-weight: 400;
+}
+
+.emotionalreviewstimeline {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.emotionalreviewitem {
+    background: #333;
+    border-radius: 6px;
+    padding: 1rem;
+    border-left: 3px solid #66B3FF;
+}
+
+.emotionalreviewdate {
+    color: #66B3FF;
+    font-size: 0.8rem;
+    margin-bottom: 0.5rem;
+}
+
+.emotionalrating {
+    margin-bottom: 0.5rem;
+}
+
+.heart {
+    color: #666;
+    font-size: 0.9rem;
+    margin-right: 1px;
+}
+
+.heart.filled {
+    color: #00ffff;
+}
+
+.emotionalreviewcontent p {
+    font-style: italic;
+    margin-bottom: 0.5rem;
+    color: #ccc;
+    font-size: 0.85rem;
+}
+
+.emotionalsupportfor {
+    color: #999;
+    font-size: 0.75rem;
+}
+
+.emotionalmetricsgrid {
+    display: grid;
+    gap: 1rem;
+}
+
+.emotionalpreferenceitem, .affectiveprojectitem, .empathycontributionitem, .emotionalmetriccard {
+    background: #333;
+    border-radius: 6px;
+    padding: 1rem;
+}
+
+.emotionalpreferenceitem h4, .affectiveprojectitem h4, .empathycontributionitem h4, .emotionalmetriccard h4 {
+    color: #66B3FF;
+    margin-bottom: 0.5rem;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.emotionalpreferenceitem p, .affectiveprojectitem p, .empathycontributionitem p {
+    color: #ccc;
+    font-size: 0.85rem;
+}
+
+/* Affective Labor Project Status */
+.affectiveprojectstatus {
+    display: inline-block;
+    padding: 0.2rem 0.5rem;
+    border-radius: 3px;
+    font-size: 0.7rem;
+    margin-bottom: 0.5rem;
+}
+
+.affectiveprojectstatus.active {
+    background: #4CAF50;
+    color: white;
+}
+
+.affectiveprojectstatus.supporting {
+    background: #00ffaa;
+    color: white;
+}
+
+.affectiveprojectstatus.planning {
+    background: #FF9800;
+    color: white;
+}
+
+/* Emotional Progress Bars */
+.emotionalprojectprogress {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: 0.5rem;
+}
+
+.emotionalprogressbar {
+    flex: 1;
+    height: 4px;
+    background: #444;
+    border-radius: 2px;
+    overflow: hidden;
+}
+
+.emotionalprogressfill {
+    height: 100%;
+    background: #00ffaa;
+    border-radius: 2px;
+}
+
+.emotionalprogresstext {
+    color: #999;
+    font-size: 0.75rem;
+}
+
+/* Emotional Intelligence Rating Summary */
+.ratingoverview {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 2.5rem;
+    align-items: start;
+}
+
+.overallrating {
+    text-align: center;
+    padding: 2rem;
+    background: linear-gradient(145deg, rgba(0, 255, 255, 0.1) 0%, rgba(0, 255, 170, 0.1) 100%);
+    border-radius: 16px;
+    border: 1px solid rgba(0, 255, 255, 0.2);
+    position: relative;
+    overflow: hidden;
+}
+
+.overallrating::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(0, 255, 255, 0.05) 0%, rgba(0, 255, 170, 0.05) 100%);
+    z-index: -1;
+}
+
+.ratingscore {
+    font-size: 3.5rem;
+    font-weight: 700;
+    background: linear-gradient(135deg, #00ffaa 0%, #00ffff 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 0.5rem;
+    font-family: 'JetBrains Mono', monospace;
+}
+
+.ratinghearts {
+    margin-bottom: 0.8rem;
+    font-size: 1.2rem;
+}
+
+.heart {
+    color: rgba(148, 163, 184, 0.3);
+    font-size: 1.1rem;
+    margin-right: 2px;
+    transition: all 0.2s ease;
+}
+
+.heart.filled {
+    color: #00ffaa;
+    filter: drop-shadow(0 0 4px rgba(0, 255, 170, 0.5));
+}
+
+.ratingcount {
+    color: #94a3b8;
+    font-size: 0.85rem;
+    font-weight: 500;
+}
+
+.ratingbreakdown {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.ratingbaritem {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    padding: 0.75rem 0;
+}
+
+.ratinglabel {
+    min-width: 120px;
+    color: #e2e8f0;
+    font-size: 0.95rem;
+    font-weight: 500;
+}
+
+.ratingbar {
+    flex: 1;
+    height: 10px;
+    background: rgba(148, 163, 184, 0.1);
+    border-radius: 6px;
+    overflow: hidden;
+    position: relative;
+}
+
+.ratingbar::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(90deg, rgba(0, 255, 170, 0.1), rgba(0, 255, 255, 0.1));
+    border-radius: 6px;
+}
+
+.ratingfill {
+    height: 100%;
+    background: linear-gradient(90deg, #00ffaa, #00ffff);
+    border-radius: 6px;
+    position: relative;
+    transition: width 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.ratingfill::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0.1), transparent);
+    border-radius: 6px;
+}
+
+.ratingvalue {
+    min-width: 40px;
+    background: linear-gradient(135deg, #00ffaa 0%, #00ffff 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-size: 0.95rem;
+    font-weight: 700;
+    font-family: 'JetBrains Mono', monospace;
+}
+
+/* Emotional Support Review Feed */
+.reviewfeed {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.reviewitem {
+    background: linear-gradient(145deg, rgba(15, 23, 42, 0.6) 0%, rgba(30, 41, 59, 0.4) 100%);
+    backdrop-filter: blur(20px);
+    border-radius: 12px;
+    padding: 2rem;
+    border-left: 3px solid transparent;
+    background-clip: padding-box;
+    border-image: linear-gradient(135deg, #00ffaa, #00ffff, #5ba3d4) 1;
+    position: relative;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.reviewitem::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 3px;
+    background: linear-gradient(135deg, #00ffaa, #00ffff, #5ba3d4);
+    border-radius: 0 2px 2px 0;
+}
+
+.reviewitem:hover {
+    transform: translateX(4px);
+    box-shadow: 
+        0 15px 30px rgba(0, 0, 0, 0.15),
+        0 0 0 1px rgba(255, 255, 255, 0.05) inset;
+}
+
+.reviewheader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.2rem;
+}
+
+.reviewerinfo {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+}
+
+.reviewername {
+    background: linear-gradient(135deg, #00ffaa 0%, #00ffff 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-weight: 600;
+    font-size: 0.95rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.reviewername:hover {
+    filter: brightness(1.2);
+}
+
+.reviewdate {
+    color: #94a3b8;
+    font-size: 0.8rem;
+    font-weight: 500;
+    font-family: 'JetBrains Mono', monospace;
+}
+
+.reviewtext {
+    color: #cbd5e1;
+    line-height: 1.7;
+    margin-bottom: 1.5rem;
+    font-size: 0.95rem;
+    font-weight: 400;
+}
+
+.reviewactions {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.actionbtn {
+    background: rgba(15, 23, 42, 0.6);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(148, 163, 184, 0.2);
+    color: #94a3b8;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    font-size: 0.8rem;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.actionbtn:hover {
+    background: rgba(0, 255, 170, 0.1);
+    border-color: rgba(0, 255, 170, 0.3);
+    color: #00ffaa;
+    transform: translateY(-1px);
+}
+
+.stats, .emotionalprofile {
+    background: linear-gradient(145deg, rgba(15, 23, 42, 0.6) 0%, rgba(30, 41, 59, 0.4) 100%);
+    backdrop-filter: blur(20px);
+    border-radius: 12px;
+    padding: 1.5rem;
+    border: 1px solid rgba(148, 163, 184, 0.1);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.stats h3, .emotionalprofile h3 {
+    background: linear-gradient(135deg, #00ffff 0%, #0096ff 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-size: 0.95rem;
+    margin-bottom: 1.2rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.metric, .emotionalitem {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.75rem 0;
+    border-bottom: 1px solid rgba(148, 163, 184, 0.1);
+    transition: all 0.2s ease;
+}
+
+.metric:hover, .emotionalitem:hover {
+    background: rgba(0, 255, 255, 0.05);
+    margin: 0 -1.5rem;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    border-radius: 6px;
+}
+
+.metric:last-child, .emotionalitem:last-child {
+    border-bottom: none;
+}
+
+.label, .emotionlabel {
+    color: #94a3b8;
+    font-size: 0.85rem;
+    font-weight: 500;
+}
+
+.value, .emotionvalue {
+    color: #f8fafc;
+    font-size: 0.85rem;
+    font-weight: 600;
+    font-family: 'JetBrains Mono', monospace;
+}
+
+.emotionalperformancemetrics h4 {
+    color: #00ffaa;
+    margin-bottom: 1rem;
+    font-size: 1rem;
+}
+
+.emotionalmetricsgrid {
+    display: grid;
+    gap: 1rem;
+}
+
+.emotionalmetricitem {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+    background: #333;
+    border-radius: 6px;
+}
+
+.emotionalmetricicon {
+    font-size: 1.5rem;
+}
+
+.emotionalmetricinfo {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+}
+
+.emotionalmetriclabel {
+    color: #ccc;
+    font-size: 0.85rem;
+}
+
+.emotionalmetricvalue {
+    color: #00ffaa;
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+.emotionalmetricitem.improving {
+    border-left: 3px solid #4CAF50;
+}
+
+.emotionalmetricitem.stable {
+    border-left: 3px solid #00ffaa;
+}
+
+.emotionalmetricitem.needsattention {
+    border-left: 3px solid #FF9800;
+}
+
+.emotionalachievementstimeline {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.emotionalachievementitem {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    padding: 1.5rem;
+    background: #333;
+    border-radius: 8px;
+    border-left: 3px solid #00ffaa;
+}
+
+.emotionalachievementicon {
+    font-size: 2rem;
+    min-width: 60px;
+    text-align: center;
+}
+
+.emotionalachievementcontent h4 {
+    color: #00ffaa;
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+}
+
+.emotionalachievementcontent p {
+    color: #ccc;
+    margin-bottom: 0.5rem;
+    font-size: 0.85rem;
+}
+
+.emotionalachievementdate {
+    color: #999;
+    font-size: 0.8rem;
+    font-weight: 500;
+}
+
+/* Emotional Metric Cards */
+.emotionalmetricvalue {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: #00ffaa;
+    margin-bottom: 0.3rem;
+}
+
+.emotional-metric-card p {
+    color: #999;
+    font-size: 0.75rem;
+}
+
+/* Remove complex sections for minimalism - Updated for Emotional Intelligence & Affective Labor */
+.development-areas, 
+.initiatives-timeline, 
+.conflicts-timeline,
+.achievements-list,
+.empathy-grid,
+
+
+.profile-content::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: 
+        radial-gradient(circle at 25% 25%, rgba(96, 165, 250, 0.03) 0%, transparent 40%),
+        radial-gradient(circle at 75% 75%, rgba(167, 139, 250, 0.03) 0%, transparent 40%);
+    pointer-events: none;
+    z-index: -1;
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: rgba(15, 23, 42, 0.5);
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(135deg, #00ffff, #0096ff);
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(135deg, #00cccc, #0080dd);
+}
+
+/* Selection Styling */
+::selection {
+    background: rgba(0, 255, 255, 0.3);
+    color: #f8fafc;
+}
+
+/* Focus States */
+.back-link:focus,
+.action-btn:focus {
+    outline: 2px solid rgba(0, 255, 255, 0.5);
+    outline-offset: 2px;
+}
+
+/* Loading Animation for Future Enhancement */
+@keyframes shimmer {
+    0% {
+        background-position: -200% 0;
+    }
+    100% {
+        background-position: 200% 0;
+    }
+}
+
+.loading-shimmer {
+    background: linear-gradient(90deg, transparent, rgba(0, 255, 255, 0.1), transparent);
+    background-size: 200% 100%;
+    animation: shimmer 2s infinite;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+    .profile-container {
+        grid-template-columns: 320px 1fr;
+        gap: 2rem;
+    }
+}
+
+@media (max-width: 1024px) {
+    .profile-container {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        max-width: 900px;
+    }
+    
+    .profile-sidebar {
+        position: static;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 1.5rem;
+    }
+    
+    .nav-bar {
+        padding: 1rem;
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    .nav-left, .nav-right {
+        flex: none;
+    }
+    
+    .rating-overview {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .profile-container {
+        padding: 0 1rem;
+        margin: 1rem auto;
+    }
+    
+    .profile-card {
+        padding: 1.5rem;
+    }
+    
+    .profile-section {
+        padding: 1.5rem;
+    }
+    
+    .nav-bar {
+        padding: 0.75rem;
+    }
+    
+    .nav-center h1 {
+        font-size: 1.2rem;
+    }
+    
+    .back-link {
+        font-size: 0.8rem;
+        padding: 0.5rem 1rem;
+    }
+    
+    .rating-bar-item {
+        gap: 1rem;
+    }
+    
+    .rating-label {
+        min-width: 80px;
+        font-size: 0.85rem;
+    }
+    
+    .review-actions {
+        gap: 0.75rem;
+    }
+    
+    .action-btn {
+        padding: 0.4rem 0.8rem;
+        font-size: 0.75rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .profile-container {
+        gap: 1.5rem;
+    }
+    
+    .profile-card, .profile-section {
+        padding: 1.25rem;
+    }
+    
+    .profile-avatar img {
+        width: 80px;
+        height: 80px;
+    }
+    
+    .rating-score {
+        font-size: 2.8rem;
+    }
+    
+    .profile-section h3 {
+        font-size: 1.1rem;
+    }
+    
+    .rating-overview {
+        gap: 1.5rem;
+    }
+}

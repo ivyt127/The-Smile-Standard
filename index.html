@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Access Portal - The Smile Standard</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <script src="java.js" type="text/javascript"></script>
+</head>
+<body>
+    <div class="login-container">
+        <div class="login-panel">
+            <div class="login-header">
+                <div class="system-logo">
+                    <div class="logo-circuit"></div>
+                    <div class="logo-text">SMILE STANDARD</div>
+                    <div class="logo-subtitle">ACCESS PORTAL</div>
+                </div>
+                <div class="system-status">
+                    <div class="status-indicator active"></div>
+                    <span>SYSTEM ONLINE</span>
+                </div>
+            </div>
+
+            <div class="login-form">
+                <div class="form-group">
+                    <label for="username" class="form-label">
+                        <span class="label-text">USER DESIGNATION</span>
+                        <span class="label-code">[ID_REQUIRED]</span>
+                    </label>
+                    <div class="input-container">
+                        <input type="text" id="username" class="form-input" placeholder="Enter your designation..." autocomplete="username">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="password" class="form-label">
+                        <span class="label-text">NEURAL KEY</span>
+                        <span class="label-code">[ENCRYPTED]</span>
+                    </label>
+                    <div class="input-container">
+                        <input type="password" id="password" class="form-input" placeholder="Enter neural key..." autocomplete="current-password">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="gridLocation" class="form-label">
+                        <span class="label-text">GRID LOCATION</span>
+                        <span class="label-code">[OPTIONAL]</span>
+                    </label>
+                    <div class="input-container">
+                        <select id="gridLocation" class="form-input">
+                            <option value="">Select Grid...</option>
+                            <option value="east-sydney">East-Sydney-Cluster</option>
+                            <option value="west-melbourne">West-Melbourne-Grid</option>
+                            <option value="north-brisbane">North-Brisbane-Zone</option>
+                            <option value="south-perth">South-Perth-Sector</option>
+                            <option value="central-adelaide">Central-Adelaide-Hub</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="security-options">
+                    <div class="checkbox-container">
+                        <input type="checkbox" id="rememberDevice" class="security-checkbox">
+                        <label for="rememberDevice" class="checkbox-label">Remember this neural interface</label>
+                    </div>
+                    
+                    <div class="checkbox-container">
+                        <input type="checkbox" id="biometricAuth" class="security-checkbox">
+                        <label for="biometricAuth" class="checkbox-label">Enable biometric verification</label>
+                    </div>
+                </div>
+
+                <button type="submit" class="login-btn" id="loginBtn">
+                    INITIALIZE CONNECTION
+                </button>
+
+                <div class="access-credentials">
+                    <div class="credentials-header">ACCESS CREDENTIALS</div>
+                    <div class="credentials-account">
+                        <div class="credentials-label">Account:</div>
+                        <div class="credentials-details">
+                            <span>User: <strong>sarah_99</strong></span>
+                            <span>Key: <strong>neural2025</strong></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-footer">
+                    <a href="#" class="footer-link" id="forgotPassword">Neural Key Recovery</a>
+                    <span class="footer-separator">|</span>
+                    <a href="#" class="footer-link" id="newRegistration">Request Access</a>
+                </div>
+            </div>
+
+            <div class="system-info">
+                <div class="info-row">
+                    <span class="info-label">SYSTEM VERSION:</span>
+                    <span class="info-value">SMILE_OS v2.4.7</span>
+                </div>
+                <div class="info-row">
+                    <span class="info-label">SECURITY LEVEL:</span>
+                    <span class="info-value" id="securityLevel">STANDARD</span>
+                </div>
+                <div class="info-row">
+                    <span class="info-label">CONNECTION STATUS:</span>
+                    <span class="info-value status-connected">ENCRYPTED</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="loading-overlay" id="loadingOverlay">
+            <div class="loading-content">
+                <div class="neural-loader"></div>
+                <div class="loading-text">
+                    <div class="loading-stage" id="loadingStage">INITIALIZING...</div>
+                    <div class="loading-progress">
+                        <div class="progress-bar" id="progressBar"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
