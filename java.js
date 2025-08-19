@@ -77,7 +77,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     setTimeout(nextStage, Math.random() * 1000 + 800);
                 } else {
                     setTimeout(() => {
-                        window.location.href = 'main.html';
+                        window.location.href = 'Main.html';
                     }, 1500);
                 }
             }
